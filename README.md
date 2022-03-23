@@ -1,4 +1,4 @@
-# Flutter macOS
+# Flutter
 
 ## Preparing to Setup
 ### 1. Install Flutter SDK
