@@ -13,4 +13,5 @@
     - pubspec.yaml ใช้สำหรับการตั้งค่าต่าง ๆ ให้กับโปรเจคหรือการเรียกใช้งานไลบราลีต่าง ๆ การประกาศไลบราลี ไอคอน ต้องทำการตั้งค่าในไฟล์นี้
     - android, ios ใช้สำหรับการเก็บโปรเจคของ Application แต่ละระบบเอาไว้ เมื่อทำการรันจะมีการเก็บลงตามระบบปฏิบัติการ สามารถทำการแก้ไขจะเป็นการดำเนินการในแต่ละระบบปฏิบัติการ เช่น 
         - เปลี่ยนชื่อ App ใน Android แต่ไม่ได้เปลี่ยนใน iOS จะทำใหชื่อแอพใน 2 ระบบปฏิบัติการไม่เหมือนกัน ถ้าต้องการให้เหมือนกันต้องเปลี่ยนทั้ง 2 โฟลเดอร์
-        - เปลี่ยน Icon App ด้วย Flutter_launcher_icons หากมีปัญหาไม่สามารถเปลี่ยน icon ได้ (วิธีแก้ https://stackoverflow.com/questions/70611977/flutter-flutter-launcher-icons-error-pub-finished-with-exit-code-255)
+        - เปลี่ยน Icon App ด้วย Flutter_launcher_icons (จาก https://pub.dev/packages/flutter_launcher_icons) หากมีปัญหาไม่สามารถเปลี่ยน icon ได้ (วิธีแก้ https://stackoverflow.com/questions/70611977/flutter-flutter-launcher-icons-error-pub-finished-with-exit-code-255)
+        - 
