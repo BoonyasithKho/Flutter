@@ -1,6 +1,6 @@
 # Widget
  - Flutter จะมองทุกอย่างเกือบทั้งหมดเป็น widget
- - Widget คือ ส่วนที่ถูกใช้สร้างเป็นหน้าตาของ App หรือ User Interface (UI) โดยนำมาประกอบเรียงกันเป็นลำดับขั้นขึ้นเป็นโครงสร้าง แต่ละ widget จะถูกวางซ้อนอยู่ภายใน Parent widget และได้รับการส่งต่อสืบทอดคุณสมบัติต่างๆ จาก Parent อีกที แม้กระทั้ง application object ก็ถือเป็น widget ซึ่งเราเรียกว่า root widget 
+ - Widget คือ ส่วนที่ถูกใช้สร้างเป็นหน้าตาของ App หรือ User Interface (UI) โดยนำมาประกอบเรียงกันเป็นลำดับขั้นขึ้นเป็นโครงสร้าง แต่ละ widget จะถูกวางซ้อนอยู่ภายใน Parent widget และได้รับการส่งต่อสืบทอดคุณสมบัติ (Properties) ต่างๆ จาก Parent อีกที แม้กระทั้ง application object ก็ถือเป็น widget ซึ่งเราเรียกว่า root widget 
  - MaterialApp คือ root widget
  - จำแนก Widget ตามการใช้งาน ได้ดังนี้
     - ใช้กำหนดโครงสร้าง (Structural Element) เช่น ปุ่ม button หรือ menu
@@ -32,3 +32,13 @@
   - Expanded −> ใช้สำหรับการขยาย children widget เพื่อให้เต็มพื้นที่การแสดงผล
   - Table −> แสดงผลข้อมูลในรูปแบบตาราง
   - Flow −> แสดงผลข้อมูลในรูปแบบคลิกเพื่อแสดงข้อมูล
+## การใช้งาน Widget
+  - ทำการ Import Lib >> import 'package:flutter/material.dart';
+  - การเรียกใช้งาน widget จะต้องทำการเรียกใช้งานผ่าน fn. runApp() ต้องทำการระบุ widget ที่จะใช้งานลงไป ทำให้ได้ runApp(app); ตัวแปร app จะทำการเรียกใช้งาน MaterialApp(title: "My App",home: Text("Hello Dart"); ที่มี properties : title: "My App",home: Text("Hello Dart") หน้าจอจะแสดงผล Hello Dart ออกทางหน้าจอโดยไม่มีการจัดวางโครงสร้าง
+  - การจัด Layout หน้าแอพด้วย Scaffold Widget จะมีการคำนวณระยะห่างระหว่างแอพกับหน้าจอ Emulator ให้อัตโนมัติ ใน Scaffold สามารถกำหนดการวาง Properties ของส่วนต่าง ๆ ได้ เช่น appBar เป็นส่วนของเมนูด้านบนแอพ และ body เป็นส่วนไว้สำหรับการแสดง Widget ที่ต้องการ
+  - สามารถทำการเปลี่ยน Theme ของ App ได้ด้วยการใช้ Properties : theme ใน MaterialApp Widget ด้วยการกำหนด theme: ThemeData(primartSwatch: Colors.green)
+  - สามารถสร้าง Widget ได้ 2 แบบ ซึ่งทั้งสองแบบสามารถเปลี่ยนไปเป็นอีกรูปแบบนึงได้
+    1) Stateless Widget เป็น Widget ที่ไม่สามารถเปลี่ยนค่าได้ใช้สำหรับสร้าง Widget แบบคงที่ เช่น ข้อความ ไอคอน
+    2) Stateful Widget เป็น Widget ที่สามารถเปลี่ยนแปลงค่าได้หรือทำงานได้หลาย State เช่น Checkbox Slider Textfield
+  - การเรียกใช้งานในส่วน Main ให้ทำการเปลี่ยน runApp(app) -> runApp(MyApp()); เพื่อให้แยกส่วนการใช้งานออกจาก Main
+  - 
