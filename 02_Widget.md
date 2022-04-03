@@ -40,5 +40,9 @@
   - สามารถสร้าง Widget ได้ 2 แบบ ซึ่งทั้งสองแบบสามารถเปลี่ยนไปเป็นอีกรูปแบบนึงได้
     1) Stateless Widget เป็น Widget ที่ไม่สามารถเปลี่ยนค่าได้ใช้สำหรับสร้าง Widget แบบคงที่ เช่น ข้อความ ไอคอน
     2) Stateful Widget เป็น Widget ที่สามารถเปลี่ยนแปลงค่าได้หรือทำงานได้หลาย State เช่น Checkbox Slider Textfield
-  - การเรียกใช้งานในส่วน Main ให้ทำการเปลี่ยน runApp(app) -> runApp(MyApp()); เพื่อให้แยกส่วนการใช้งานออกจาก Main
-  - 
+  - การเรียกใช้งานในส่วน Main ให้ทำการเปลี่ยน runApp(app) -> runApp(MyApp()); เพื่อให้แยกส่วนการใช้งานออกจากกัน
+  - Center widget เป็น widget ที่ใช้ครอบ widget อื่น ๆ เพื่อบังคับการแสดงผลให้อยู่กลางจอภาพ
+  - การตกแต่ง Text Widget สามารถทำการเพิ่ม properties style: TextStyle(fontsize: 50,color: Colors.Blue), เข้าไปใน widget เพื่อทำการปรับสี และกำหนดขนาดของตัวอักษร
+  - การนำภาพเข้ามาใช้ใน Flutter โดยใช้ Image Widget แล้วทำการกำหนด Path ของภาพ ถ้่านำภาพมาจาก url ก็ใช้ NetworkImage('URL')
+  - Column Widget เป็นการนำ Widget มาเรียงลำดับในแนวตั้ง Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, Children: <Widget>[Text('Hello Flutter'),Image(image: NetworkImage('URL')]  โดย mainAxisAlignment เป็น Property วางตำแหน่ง item ใน Column
+  - Row Widget เป็นการนำ Widget มาเรียงลำดับในแนวนอน โดย เขียนคล้าย ๆ Column Widget
