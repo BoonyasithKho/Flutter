@@ -44,5 +44,13 @@
   - Center widget เป็น widget ที่ใช้ครอบ widget อื่น ๆ เพื่อบังคับการแสดงผลให้อยู่กลางจอภาพ
   - การตกแต่ง Text Widget สามารถทำการเพิ่ม properties style: TextStyle(fontsize: 50,color: Colors.Blue), เข้าไปใน widget เพื่อทำการปรับสี และกำหนดขนาดของตัวอักษร
   - การนำภาพเข้ามาใช้ใน Flutter โดยใช้ Image Widget แล้วทำการกำหนด Path ของภาพ ถ้่านำภาพมาจาก url ก็ใช้ NetworkImage('URL')
-  - Column Widget เป็นการนำ Widget มาเรียงลำดับในแนวตั้ง Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, Children: <Widget>[Text('Hello Flutter'),Image(image: NetworkImage('URL')]  โดย mainAxisAlignment เป็น Property วางตำแหน่ง item ใน Column
+  - Column Widget เป็นการนำ Widget มาเรียงลำดับในแนวตั้ง 
+    ```
+    Column(
+     mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
+     Children: [
+      Text('Hello Flutter'),
+      Image(image: NetworkImage('URL')]);
+    ```
+    โดย mainAxisAlignment เป็น Property วางตำแหน่ง item ใน Column
   - Row Widget เป็นการนำ Widget มาเรียงลำดับในแนวนอน โดย เขียนคล้าย ๆ Column Widget
