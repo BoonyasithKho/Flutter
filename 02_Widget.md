@@ -55,8 +55,44 @@
     โดย mainAxisAlignment เป็น Property วางตำแหน่ง item ใน Column
   - Row Widget เป็นการนำ Widget มาเรียงลำดับในแนวนอน โดย เขียนคล้าย ๆ Column Widget
   - Listview Widget เป็น Widget ที่แสดงข้อมูลแบบรายการ เมื่อมีการแสดงผลเกินพื้นที่หน้าจอสามารถทำการเลื่อนหน้าจอหรือ Scroll Down ได้
-    - List คือ โครงสร้างข้อมูลทีี่จัดการเกี่ยวกับกลุ่มข้อมูล
+    - List คือ โครงสร้างข้อมูลที่จัดการเกี่ยวกับกลุ่มข้อมูล
     - Listview จะใช้ในกรณีที่ต้องการแสดงผลรายการขนาดเล็ก (4-10 รายการ)
-    - Listview.builder จะใช้ในกรณีที่มีการแสดงรายการจำนวนมาก โดยระบุจำนวนรายการผ่าน Property ชื่อว่า itemcount
+    ```
+    List<Widget> data = [];
+    data.add("สิ่งที่จะเพิ่มเข้าไปใน List");
+    ```
+    - สามารถนำ List ออกเป็นฟังก์ชันเพื่อให้ง่ายต่อการเรียกใช้งาน ดังนี้
+    ```
+    List<Widget> getData(int count) {
+      List<Widget> data = [];
+      for (var i = 0 ; i < count ; i++){
+         data.add(Text("รายการที่ ${i+1}"));
+      }
+      return data;
+    }
+    ```
+      ซึ่งเวลาเรียกใช้งานก็เรียกผ่าน ฟังก์ชัน getData(กำหนดค่าที่ต้องการให้แสดงจำนวนรายการ)
     - ListTile กำหนดรายละเอียดต่าง ๆ ของ List แต่ละรายการ เช่น หัวข้อ (title) และหัวข้อย่อย (subtitle)
+    ```
+    var menu = ListTile(
+        title: Text(
+          "เมนูที่ ${i + 1}",
+          style: const TextStyle(color: Colors.blue),
+        ),
+        subtitle: Text("รายการย่อยที่ ${i + 1}"),
+      );
+
+    data.add(menu);
+    ```
+    - Listview.builder จะใช้ในกรณีที่มีการแสดงรายการจำนวนมาก ซึ่งเหมาะกับการแสดงผลข้อมูลจากฐานข้อมูลที่ไม่รู้ขีดจำกัด แต่สามารถกำหนดจำนวนการแสดงขีดจำกัดได้โดยระบุจำนวนรายการผ่าน Property ชื่อว่า itemcount
+    ```
+    ListView.builder(
+      itemBuilder: (BuildContext context, int index) {
+        return ListTile(
+          title: Text("เมนูที่ ${index + 1}"),
+        );
+      },
+      itemCount: 10,
+    )
+    ```
     - 
