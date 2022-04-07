@@ -28,7 +28,18 @@
     - ใน Container จะถูกกำหนดโดย Properties ที่ชื่อ child ซึ่งสามารถบรรจุ Widget ได้หลายชนิด เช่น Row, Column, Image หรือว่าเป็น Container เอง ตัวใดตัวหนึ่งเพียงตัวเดียว
     - สามารถกำหนดขนาด รูปร่าง หรือจัดวางตำแหน่ง รวมไปถึงการแสดงลวดลายให้สวยงามได้ โดยใช้จะมีการขยายเต็มหน้าจอสำหรับการจัดวาง UI ให้เหมาะสมกับขนาดหน้าจอ
     - BoxDecoration ใช้สำหรับกำหนดรูปร่างของ Container เช่น สี ลักษณะรูปร่างของ Container
+      ```
+      Container(
+        decoration: BoxDecoration(color: Colors.green,borderRadius: BorderRadius.circular(40)),
+        height: 50,
+      ),
+      ```
     - Padding ใช้กำหนดระยะห่างของ Widget ออกจากขอบของ Layout หรือหน้าจอแสดงผล
+      ```
+      Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(...),
+      ),
   - Stack -> สร้างลำดับการซ้อนทับในหน้า Layout เวลาใช้งาน ให้มองภาพ 2D ให้เป็น 3D แล้วเรียบเรียงด้านหน้า-ด้านหลังของ Widget นั้น
   - ListView −> แสดงผล children widget เป็นแบบ list
   - GridView −> แสดงผล children widget เป็นแบบ gallery
@@ -98,4 +109,3 @@
       itemCount: 10,
     )
     ```
-    - 
