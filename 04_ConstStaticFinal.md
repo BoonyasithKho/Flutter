@@ -4,3 +4,4 @@
   - Final : ตัวแปรที่มีกำหนดค่าได้ครั้งเดียว และต้องมีการกำหนดค่าเริ่มต้นให้เสมอ และเมื่อกำหนดค่าให้แล้วจะไม่สามารถแก้ไขค่าได้ กรณีเป็น Reference/Object Data Types สามารถแก้ไขค่าได้ แต่ไม่สามารถกำหนดค่าให้ตัวแปรใหม่ได้
     - primitive Data Types : int, double, boolean and string
     - Reference/Object Data Types: List, Map, Object
+  - late : เป็น null safety keyword คล้ายกับการเพิ่มสัญลักษณ์ ! ไปด้านหลังตัวแปรนั้น เสมือนกับเราบอก Dart ว่า “เชื่อฉันสิ ว่ามันจะไม่ null มันจะมีค่าเสมอ”
