@@ -53,7 +53,7 @@
   - สามารถทำการเปลี่ยน Theme ของ App ได้ด้วยการใช้ Properties : theme ใน MaterialApp Widget ด้วยการกำหนด theme: ThemeData(primartSwatch: Colors.green)
   - สามารถสร้าง Widget ได้ 2 แบบ ซึ่งทั้งสองแบบสามารถเปลี่ยนไปเป็นอีกรูปแบบนึงได้
     1) Stateless Widget เป็น Widget ที่ไม่สามารถเปลี่ยนค่าได้ใช้สำหรับสร้าง Widget แบบคงที่ เช่น ข้อความ ไอคอน
-    2) Stateful Widget เป็น Widget ที่สามารถเปลี่ยนแปลงค่าได้หรือทำงานได้หลาย State เช่น Checkbox Slider Textfield ด้วยการ setState
+    2) Stateful Widget เป็น Widget ที่สามารถเปลี่ยนแปลงค่าได้หรือทำงานได้หลาย State เช่น Checkbox Slider Textfield
   - การเรียกใช้งานในส่วน Main ให้ทำการเปลี่ยน runApp(app) -> runApp(MyApp()); เพื่อให้แยกส่วนการใช้งานออกจากกัน
   - Center widget เป็น widget ที่ใช้ครอบ widget อื่น ๆ เพื่อบังคับการแสดงผลให้อยู่กลางจอภาพ
   - การตกแต่ง Text Widget สามารถทำการเพิ่ม properties style: TextStyle(fontsize: 50,color: Colors.Blue), เข้าไปใน widget เพื่อทำการปรับสี และกำหนดขนาดของตัวอักษร
@@ -109,3 +109,9 @@
       itemCount: 10,
     )
     ```
+## Stateful Widget
+   - Stateful Widget เป็น Widget ที่สามารถเปลี่ยนแปลงค่าได้ด้วยการ setState ตามที่ต้องการ
+   - วงจรการทำงาน : initState() -> build() -> dispose()
+     - initState() คือ Method ที่ถูกเรียกให้ทำงานครั้งเดียวหลังจากที่ state ถูกสร้างเรียบร้อยแล้ว สามารถที่จะเปลี่ยนแปลงข้อมูลของ Widget ได้
+     - build() คือ Method ที่ใช้ในการสร้าง Widget หรือ Widget Tree ของแอพพฃิเคชัน ถ้าต้องการให้ Widget ของแอพมีหน้าตาแบบใดก็ให้เขียน Method build โดยจะถูกเรียกใช้งานเมื่อมีการเปลี่ยนแปลงข้อมูลใน State โดยทำงานผ่าน method setState()
+     - dispose() คือ Method ที่ถูกใช้เมื่อ widget หรือ state หายไปจากหน้าแอพหรือให้หยุดทำงานและนำออกจากระบบ
