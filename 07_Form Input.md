@@ -6,4 +6,8 @@
 - card widget การแสดงผลแบบการ์ด มีการกำหนด Attribution ที่ชื่อว่า elevation ในการกำหนดเงาให้การ์ด
 - margin : การกำหนดระยะห่างจาก ขอบนอก ของ Layout
 - padding : การกำหนดระยะห่างจาก ขอบใน ของ Layout
+- State Management : การจัดการ State ในหลาย ๆ หน้า มี 2 ส่วน คือ
+  - Provider : ดูแลและจัดการข้อมูลแล้วนำไปส่งให้ Consumer
+  - Consumer : นำข้อมูลที่ได้จาก Provider ไปสร้างหรือแสดงผลใน หน้าแอพหรือ widget
+  - ต้องทำการติดตั้ง package เพิ่มเติม คือ provider
 - 
