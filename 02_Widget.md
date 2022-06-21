@@ -109,7 +109,13 @@
       itemCount: 10,
     )
     ```
-## Stateful Widget
+## State Widget
+  - State คือ จำนวนหน้าต่างของแอพพลิเคชัน หากมีจำนวนหน้าต่างของแอพจำนวน 2 หน้า จะถือว่ามีจำนวน State ทั้งหมด 2 State
+### Stateless Widget
+   - Stateless Widget เป็น Widget ที่ไม่มีการเปลี่ยนแปลงตัวเอง การแสดงผลจะมีลักษณะคงที่ไม่เปลี่ยนแปลง
+   - 
+
+### Stateful Widget
    - Stateful Widget เป็น Widget ที่สามารถเปลี่ยนแปลงค่าได้ด้วยการ setState ตามที่ต้องการ
    - วงจรการทำงาน : initState() -> build() -> dispose()
      - initState() คือ Method ที่ถูกเรียกให้ทำงานครั้งเดียวหลังจากที่ state ถูกสร้างเรียบร้อยแล้ว สามารถที่จะเปลี่ยนแปลงข้อมูลของ Widget ได้
