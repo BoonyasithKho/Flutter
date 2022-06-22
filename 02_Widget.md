@@ -46,6 +46,7 @@
   - Expanded −> ใช้สำหรับการขยายความสูง children widget เพื่อให้เต็มพื้นที่การแสดงผล โดยผ่าน Flex Properties
   - Table −> แสดงผลข้อมูลในรูปแบบตาราง
   - Flow −> แสดงผลข้อมูลในรูปแบบคลิกเพื่อแสดงข้อมูล
+  - SizedBox -> ใช้สำหรับการกำหนดขนาดการแสดงผลของ Widget ที่อยู่ภายใน จะคล้ายกับการใช้งาน Container แต่จะกิน RAM น้อยกว่า แต่จะสามารถกำหนดได้เฉพาะความกว้าง ความยาวเท่านั้น กำหนดค่าอื่น ๆ ไม่ได้
 ## การใช้งาน Widget
   - ทำการ Import Lib >> import 'package:flutter/material.dart';
   - การเรียกใช้งาน widget จะต้องทำการเรียกใช้งานผ่าน fn. runApp() ต้องทำการระบุ widget ที่จะใช้งานลงไป ทำให้ได้ runApp(app); ตัวแปร app จะทำการเรียกใช้งาน MaterialApp(title: "My App",home: Text("Hello Dart"); ที่มี properties : title: "My App",home: Text("Hello Dart") หน้าจอจะแสดงผล Hello Dart ออกทางหน้าจอโดยไม่มีการจัดวางโครงสร้าง
